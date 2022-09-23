@@ -22,7 +22,7 @@
 
       /* use margin to center div   */
       .fix-width-center-div {
-        width: 200px;
+        width: 50%;
         margin: 0 auto;
         background-color: rgb(122, 184, 31);
         color: #fff;
@@ -30,6 +30,14 @@
 
       .txt-center {
         text-align: center;
+      }
+
+      /* centering div by text-center  */
+      .center-div-by-text-center {
+        width: 50%;
+        display: inline-block;
+        background-color: rgb(122, 184, 31);
+        color: #fff;
       }
 
       /* use position  */
@@ -72,6 +80,12 @@
         vertical-align: middle;
         text-align: center;
       }
+
+      /* for margin top to bottom  */
+      .my-2 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
     </style>
   </head>
   <body>
@@ -91,10 +105,18 @@
       Enamul
     </h1>
 
-    <!-- if block element set width then text-align: center; not work this time work margin: auto; for centering block element -->
-    <div class="fix-width-center-div">
+    <!-- if block element set width then text-align: center; not work only this time work margin: auto; for centering block element -->
+    <div class="fix-width-center-div txt-center">
       <!-- centering h1 element from set width  -->
-      <h1 class="txt-center">Enamul</h1>
+      <h1>Enamul</h1>
+    </div>
+
+    <!-- if block element set width then text-align: center work only this time when set width: 50%;  display: inline-block; at parent div for centering block element -->
+    <div class="txt-center my-2">
+      <div class="center-div-by-text-center">
+        <!-- centering h1 element from set width  -->
+        <h1>Enamul</h1>
+      </div>
     </div>
 
     <!-- centering element by css position -->
