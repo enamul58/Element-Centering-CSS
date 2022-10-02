@@ -20,7 +20,7 @@
         color: #fff;
       }
 
-      /* use margin to center div   */
+      /* use margin to center div it's work only set width  */
       .fix-width-center-div {
         width: 50%;
         margin: 0 auto;
@@ -67,6 +67,8 @@
         height: 250px;
         border: 2px double black;
         margin: 10px auto;
+        background: green;
+        color: #fff;
       }
 
       .table-class {
@@ -86,10 +88,36 @@
         margin-top: 10px;
         margin-bottom: 10px;
       }
+
+      /* using felx to center div or element  */
+      .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+      }
+
+      /* using grid to center div or element  */
+      .grid {
+        display: grid;
+        /* justify-content: center;
+        align-items: center; */
+        place-items: center;
+        height: inherit;
+      }
+
+      /* using grid or flex to child element center  */
+      .grid-margin {
+        /* display: grid; */
+        display: flex;
+      }
+      .grid-margin p {
+        margin: auto;
+      }
     </style>
   </head>
   <body>
-    <!-- block element centering by text-align: center only work when no width set -->
+    <!-- block element centering by text-align: center element base of give width-->
     <div class="center">
       <h1>Enamul</h1>
     </div>
@@ -107,7 +135,7 @@
 
     <!-- if block element set width then text-align: center; not work only this time work margin: auto; for centering block element -->
     <div class="fix-width-center-div txt-center">
-      <!-- centering h1 element from set width  -->
+      <!-- centering h1 element from set width by text-center  -->
       <h1>Enamul</h1>
     </div>
 
@@ -129,6 +157,35 @@
     <div class="coustom-div">
       <div class="table-class">
         <p>Center Me!</p>
+      </div>
+    </div>
+
+    <!-- centering element / div using flex div is a block element so width: 100%
+    auto set when declare block element but height must be set then verticaly
+    center element otherwise it's work only horizontal  -->
+    <div class="coustom-div">
+      <div class="flex">
+        <p>enamul</p>
+      </div>
+    </div>
+
+    <!-- centering element / div using grid div is a block element so width: 100%
+    auto set when declare block element but height must be set then verticaly
+    center element otherwise it's work only horizontal  -->
+    <div class="coustom-div">
+      <div class="grid">
+        <p>enamul</p>
+      </div>
+    </div>
+
+    <!-- centering element / div using grid or flex div is a block element so width: 100%
+    auto set when declare block element but height must be set then verticaly
+    center element otherwise it's work only horizontal  -->
+
+    <!-- grad chile element set margin auto then div will be chile element will be center  -->
+    <div class="coustom-div">
+      <div class="grid">
+        <p>enamul</p>
       </div>
     </div>
   </body>
